@@ -1,8 +1,7 @@
 import math
 
 def primary(n, row, col):
-  x = row + col
-  return math.comb(n + x, x + 1)
+  return math.comb(n + row + col, row + col + 1)
 
 def secondary(n, col):
   return math.comb(n + col, col)
@@ -20,22 +19,6 @@ def get_formatted_str(j, num):
     return "{:6}".format(num)
 
 def main():
-  # for col in range(4):
-  #   for row in range(3):
-
-  #     for i in range(10):
-  #       print("{:6}".format(primary(i, row, col)), end="") 
-  #     print()
-
-  #     for i in range(9):
-  #       for j in range(10):
-  #         num = secondary(j, row, col) + primary(j, row, col) * i
-  #         print("{:6}".format(num), end="")
-  #       print()
-  #     print()
-      
-  #   print()
-
   s = ""
   for row in range(3):
 
