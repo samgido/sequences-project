@@ -1,5 +1,11 @@
 import math
 
+ROW_COUNT = 4 # Default is 3
+COL_COUNT = 5 # Default is 4
+
+CELL_ROW_COUNT = 10 # Default is 10
+CELL_COL_COUNT = 10 # Default is 10
+
 def primary(n, row, col):
   return math.comb(n + row + col, row + col + 1)
 
@@ -20,26 +26,30 @@ def get_formatted_str(j, num):
 
 def main():
   s = ""
-  for row in range(3):
+  for row in range(ROW_COUNT):
 
-    for col in range(4):
-      for j in range(10):
+    for col in range(COL_COUNT):
+      for j in range(CELL_COL_COUNT):
+        s += "-----" 
+      s += "--" 
+    s += "\n"
+
+    for col in range(COL_COUNT):
+      for j in range(CELL_COL_COUNT):
         num = primary(j, row, col)
         s += get_formatted_str(j, num)
 
       s += " |"
     s += "\n"
 
-    for i in range(9):
-      for col in range(4):
-        for j in range(10):
+    for i in range(CELL_ROW_COUNT - 1): 
+      for col in range(COL_COUNT):
+        for j in range(CELL_COL_COUNT):
           num = secondary(j, col) + primary(j, row, col) * i
           s += get_formatted_str(j, num)
 
         s += " |"
       s += "\n"
-    
-    s += "\n"
   
   with open("output.txt", "w") as file:
     file.write(s)
