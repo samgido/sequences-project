@@ -1,3 +1,4 @@
+import numpy
 import math
 
 ROW_COUNT = 4 # Default is 3
@@ -6,31 +7,36 @@ COL_COUNT = 5 # Default is 4
 CELL_ROW_COUNT = 10 # Default is 10
 CELL_COL_COUNT = 10 # Default is 10
 
+MAX_NUM_LENGTHS = [0 for _ in range(CELL_COL_COUNT)]
+
 def primary(n, row, col):
   return math.comb(n + row + col, row + col + 1)
 
 def secondary(n, col):
   return math.comb(n + col, col)
 
+def initialize_formatting():
+  i =  CELL_ROW_COUNT - 1
+  col = COL_COUNT - 1
+  row = ROW_COUNT - 1
+
+  for j in range(CELL_COL_COUNT):
+    num = secondary(j, col) + primary(j, row, col) * i
+    MAX_NUM_LENGTHS[j] = len(str(num))
+
 def get_formatted_str(j, num):
-  if j == 0:
-    return "{:2}".format(num)
-  elif j < 3:
-    return "{:3}".format(num)
-  elif j < 5:
-    return "{:4}".format(num)
-  elif j < 8:
-    return "{:5}".format(num)
-  else:
-    return "{:6}".format(num)
+  form = "{:" + str(MAX_NUM_LENGTHS[j] + 1) + "}"
+  return form.format(num)
 
 def main():
+  initialize_formatting() 
+
   s = ""
   for row in range(ROW_COUNT):
 
     for col in range(COL_COUNT):
-      for j in range(CELL_COL_COUNT):
-        s += "-----" 
+      for j in range(sum(MAX_NUM_LENGTHS) + len(MAX_NUM_LENGTHS)):
+        s += "-" 
       s += "--" 
     s += "\n"
 
