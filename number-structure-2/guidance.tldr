@@ -42,9 +42,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 1830.8607183615513,
-			"y": 2372.88244845143,
-			"lastActivityTimestamp": 1716306687416,
+			"x": 1480.2354778427066,
+			"y": 1877.9365951922787,
+			"lastActivityTimestamp": 1717088191124,
 			"meta": {}
 		},
 		{
@@ -55,20 +55,21 @@
 			"typeName": "page"
 		},
 		{
-			"x": 1218.0738137752637,
-			"y": 713.4048180621584,
-			"z": 0.17133855086351876,
+			"x": -409.50404831205094,
+			"y": -1482.0748232465387,
+			"z": 0.38851946298274753,
 			"meta": {},
 			"id": "camera:page:page",
 			"typeName": "camera"
 		},
 		{
-			"editingShapeId": "shape:ii8-LKu5Iq_rAiqaM1FuD",
+			"editingShapeId": null,
 			"croppingShapeId": "shape:lEQyaSJEK7_VSV7Mp9OYm",
 			"selectedShapeIds": [
-				"shape:rhxqK43cOZDOHUxzIDg82"
+				"shape:fXa1rmgHTwUQ51l3GZkIb",
+				"shape:mm4IsdGT5z4jOEgkE3HB9"
 			],
-			"hoveredShapeId": null,
+			"hoveredShapeId": "shape:fXa1rmgHTwUQ51l3GZkIb",
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
 			"focusedGroupId": null,
@@ -90,7 +91,7 @@
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
-				"type": "move",
+				"type": "default",
 				"rotation": 0
 			},
 			"isFocusMode": false,
@@ -100,7 +101,7 @@
 			"screenBounds": {
 				"x": 0,
 				"y": 0,
-				"w": 928,
+				"w": 1536,
 				"h": 803.2000122070312
 			},
 			"insets": [
@@ -1172,7 +1173,7 @@
 		},
 		{
 			"x": 1299.0194819142166,
-			"y": 1840.768403264305,
+			"y": 1860.8446254228438,
 			"rotation": 0,
 			"isLocked": false,
 			"opacity": 1,
@@ -1195,7 +1196,7 @@
 		},
 		{
 			"x": 1238.9973772472276,
-			"y": 1909.6826715856623,
+			"y": 1929.758893744201,
 			"rotation": 0,
 			"isLocked": false,
 			"opacity": 1,

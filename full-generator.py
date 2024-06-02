@@ -1,8 +1,8 @@
 import numpy
 import math
 
-ROW_COUNT = 4 # Default is 3
-COL_COUNT = 5 # Default is 4
+ROW_COUNT = 3 # Default is 3
+COL_COUNT = 4 # Default is 4
 
 CELL_ROW_COUNT = 10 # Default is 10
 CELL_COL_COUNT = 10 # Default is 10
